@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ACT-001",
+    "deal_id": "DEAL-2401",
+    "broker_id": "marcus_webb",
+    "type": "settlement",
+    "title": "Settlement booked — Harrison/Chen Donnybrook",
+    "detail": "AllianceCorp settlement team has scheduled funds for 14/05. CBA disbursement confirmed.",
+    "timestamp": "2026-04-26T09:14:00",
+    "actor": "Natalie Chen, AllianceCorp Settlements"
+  },
+  {
+    "id": "ACT-002",
+    "deal_id": "DEAL-2414",
+    "broker_id": "daniel_singh",
+    "type": "settlement",
+    "title": "Settlement booked — Chen Family Logan QLD",
+    "detail": "Settlement scheduled 02/05 — St George funds requested. Tenant search underway with QLD agent.",
+    "timestamp": "2026-04-26T10:15:00",
+    "actor": "AllianceCorp Settlements"
+  },
+  {
+    "id": "ACT-003",
+    "deal_id": "DEAL-2407",
+    "broker_id": "olivia_park",
+    "type": "finance_update",
+    "title": "Final approval submitted — Watson",
+    "detail": "Westpac credit assessment in progress. Awaiting payslips from applicants.",
+    "timestamp": "2026-04-26T08:55:00",
+    "actor": "Olivia Park, Meridian Mortgage"
+  },
+  {
+    "id": "ACT-004",
+    "deal_id": "DEAL-2402",
+    "broker_id": "marcus_webb",
+    "type": "stock_allocation",
+    "title": "Property allocated — Harrison/Chen 2nd investment",
+    "detail": "153 Acacia Drive, Craigieburn allocated at Priority 1. Reservation expires 23/04 17:00.",
+    "timestamp": "2026-04-25T16:02:00",
+    "actor": "Peter Shahin, AllianceCorp Acquisitions"
+  },
+  {
+    "id": "ACT-005",
+    "deal_id": "DEAL-2408",
+    "broker_id": "daniel_singh",
+    "type": "compliance",
+    "title": "SMSF deed amendment in progress — Khan",
+    "detail": "Trustee structure being updated by client's accountant. Liberty pre-approval on hold.",
+    "timestamp": "2026-04-25T13:10:00",
+    "actor": "Daniel Singh, Meridian Mortgage"
+  },
+  {
+    "id": "ACT-006",
+    "deal_id": "DEAL-2403",
+    "broker_id": "marcus_webb",
+    "type": "valuation",
+    "title": "Valuation ordered — Patel Pakenham",
+    "detail": "Macquarie has requested Opteon valuation. Site inspection 28/04.",
+    "timestamp": "2026-04-24T11:37:00",
+    "actor": "Marcus Webb, Meridian Mortgage"
+  },
+  {
+    "id": "ACT-007",
+    "deal_id": "DEAL-2409",
+    "broker_id": "rebecca_horton",
+    "type": "stock_allocation",
+    "title": "Property allocated — Brennan",
+    "detail": "91 Pinehurst Boulevard, Tarneit allocated. Awaiting EOI signature.",
+    "timestamp": "2026-04-24T16:48:00",
+    "actor": "Peter Shahin, AllianceCorp Acquisitions"
+  },
+  {
+    "id": "ACT-008",
+    "deal_id": "DEAL-2404",
+    "broker_id": "marcus_webb",
+    "type": "finance_update",
+    "title": "Pre-approval lodged — Okafor",
+    "detail": "ANZ application submitted. Awaiting last 2 payslips from secondary applicant.",
+    "timestamp": "2026-04-23T14:08:00",
+    "actor": "Marcus Webb, Meridian Mortgage"
+  }
+]

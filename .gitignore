@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local environment / secrets — DEFENSIVE. Never commit credentials.
+.env
+.env.local
+env_*
+*_env
+.envrc
+
+# Local logs / build artefacts (none expected)
+*.log
+node_modules/

@@ -1,0 +1,34 @@
+{
+  "broker": {
+    "id": "marcus_webb",
+    "name": "Marcus Webb",
+    "first_name": "Marcus",
+    "title": "Senior Mortgage Broker",
+    "email": "marcus.webb@meridianmortgage.com.au",
+    "phone": "0411 234 567",
+    "initials": "MW",
+    "firm_id": "meridian_mortgage"
+  },
+  "firm": {
+    "id": "meridian_mortgage",
+    "name": "Meridian Mortgage Group",
+    "type": "External Partner",
+    "address": "Level 12, 333 Collins Street, Melbourne VIC 3000",
+    "abn": "12 345 678 901",
+    "broker_count": 4,
+    "ac_relationship_since": "2020-08-12"
+  },
+  "firm_brokers": [
+    { "id": "marcus_webb",    "name": "Marcus Webb",    "title": "Senior Mortgage Broker",     "initials": "MW", "active_deals": 6 },
+    { "id": "olivia_park",    "name": "Olivia Park",    "title": "Mortgage Broker",            "initials": "OP", "active_deals": 4 },
+    { "id": "daniel_singh",   "name": "Daniel Singh",   "title": "SMSF Lending Specialist",    "initials": "DS", "active_deals": 3 },
+    { "id": "rebecca_horton", "name": "Rebecca Horton", "title": "Associate Broker",           "initials": "RH", "active_deals": 2 }
+  ],
+  "ac_csm": {
+    "name": "Peter Shahin",
+    "title": "Head of Acquisitions",
+    "email": "peter.shahin@alliancecorp.com.au",
+    "phone": "03 9000 1100",
+    "initials": "PS"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard · AllianceCorp Broker Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app-header"></div>
+
+  <main style="max-width:1280px;margin:0 auto;padding:2rem 1.5rem 0;">
+    <section id="welcome-strip" style="margin-bottom:2rem;"></section>
+
+    <section id="kpi-tiles" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-bottom:2.5rem;"></section>
+
+    <section style="display:grid;grid-template-columns:1.4fr 1fr;gap:1.5rem;margin-bottom:3rem;" id="dashboard-grid">
+      <div id="attention-list"></div>
+      <div id="activity-feed"></div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/app.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

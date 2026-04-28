@@ -1,0 +1,62 @@
+[
+  {
+    "id": "RES-001",
+    "category": "Rate Sheets",
+    "title": "Lender Rate Sheet — May 2026",
+    "summary": "Current investor variable + fixed rates across the AllianceCorp panel of 28 lenders. Updated weekly.",
+    "format": "PDF",
+    "size": "640 KB",
+    "updated": "2026-04-26",
+    "icon": "rates"
+  },
+  {
+    "id": "RES-002",
+    "category": "Broker Guides",
+    "title": "AllianceCorp Broker Onboarding Pack",
+    "summary": "How AllianceCorp works with external brokers — lifecycle, allocation queue, EOI process, commission schedule.",
+    "format": "PDF",
+    "size": "2.1 MB",
+    "updated": "2026-03-12",
+    "icon": "guide"
+  },
+  {
+    "id": "RES-003",
+    "category": "Policy Docs",
+    "title": "SMSF Lending Policy — AllianceCorp",
+    "summary": "Approved SMSF lender list, LVR ceilings, deed requirements, contracts-blocking rules.",
+    "format": "PDF",
+    "size": "880 KB",
+    "updated": "2026-02-28",
+    "icon": "policy"
+  },
+  {
+    "id": "RES-004",
+    "category": "Market Updates",
+    "title": "AllianceCorp Market Outlook — Q2 2026",
+    "summary": "Quarterly review of growth corridors across VIC/QLD/NSW. Yield trends, rental vacancy, builder lead times.",
+    "format": "PDF",
+    "size": "3.4 MB",
+    "updated": "2026-04-08",
+    "icon": "chart"
+  },
+  {
+    "id": "RES-005",
+    "category": "Broker Guides",
+    "title": "Settlement Checklist — Brokers",
+    "summary": "10-point card view of what AllianceCorp's settlement team needs from your client between EOI and settlement.",
+    "format": "PDF",
+    "size": "320 KB",
+    "updated": "2026-03-04",
+    "icon": "checklist"
+  },
+  {
+    "id": "RES-006",
+    "category": "Market Updates",
+    "title": "Property Wealth Plan — Sample",
+    "summary": "Anonymised PWP showing the strategy session output your client receives. Useful for setting expectations.",
+    "format": "PDF",
+    "size": "5.2 MB",
+    "updated": "2026-01-22",
+    "icon": "guide"
+  }
+]

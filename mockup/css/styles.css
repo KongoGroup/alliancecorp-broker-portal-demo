@@ -1,0 +1,661 @@
+/* AllianceCorp Broker Portal — Mockup Stylesheet
+ * Brand tokens extracted from https://www.alliancecorp.com.au/ on 2026-04-28.
+ * Source: Elementor kit-5 globals (post-5.css).
+ *
+ * Palette         hex          notes
+ *   navy           #03267D     primary brand — hero, headings, header bar
+ *   gold           #D0A117     accent — premium CTAs, AC brand mark, status
+ *   light-blue     #6EC1E4     secondary button (light brand blue)
+ *   green          #61CE70     success / accent
+ *   secondary      #54595F     dark grey — body headings
+ *   text           #7A7A7A     body copy
+ *   bg-grey        #F8F8F8     page background
+ * Typography
+ *   Headings:  "Gotham Bold"  (hosted @ alliancecorp.com.au)
+ *   Body:      "Gotham Book"  (hosted @ alliancecorp.com.au)
+ *   Premium subheading pattern: ALL CAPS + letter-spacing 2.5px (extracted from kit)
+ * Container max-width: 1140px
+ */
+
+/* --- Custom fonts -------------------------------------------------------
+ * Gotham is AllianceCorp's brand font but their CDN-hosted files are CORS-
+ * blocked when loaded from anywhere other than their own site. Montserrat
+ * (geometric sans, similar metrics) is loaded from Google Fonts as a
+ * deliberate alternate so the demo looks consistent regardless. The
+ * @font-face declarations for Gotham remain — if you serve the demo from
+ * a domain AllianceCorp's CDN allows, they'll be picked up automatically.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@font-face {
+  font-family: 'Gotham Bold';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('https://www.alliancecorp.com.au/wp-content/uploads/2023/05/Gotham-Bold.woff2') format('woff2'),
+       url('https://www.alliancecorp.com.au/wp-content/uploads/2023/05/Gotham-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gotham Book';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('https://www.alliancecorp.com.au/wp-content/uploads/2023/05/Gotham-Book-Font.woff2') format('woff2'),
+       url('https://www.alliancecorp.com.au/wp-content/uploads/2023/05/Gotham-Book-Font.woff') format('woff');
+}
+
+/* --- Tokens ------------------------------------------------------------- */
+:root {
+  --ac-navy: #03267D;
+  --ac-navy-dark: #021A59;
+  --ac-navy-darker: #010F38;
+  --ac-gold: #D0A117;
+  --ac-gold-light: #E5BB39;
+  --ac-light-blue: #6EC1E4;
+  --ac-green: #61CE70;
+  --ac-secondary: #54595F;
+  --ac-text: #7A7A7A;
+  --ac-bg: #F8F8F8;
+  --ac-white: #FFFFFF;
+  --ac-border: #E0E0E0;
+  --ac-border-soft: #EFEFEF;
+  --ac-danger: #C0392B;
+  --ac-warning: #D0A117;
+  --ac-info: #2C8FB8;
+
+  --font-heading: 'Gotham Bold', 'Montserrat', 'Helvetica Neue', sans-serif;
+  /* Headings use heavier weight regardless — Montserrat 700 is the closest free analogue for Gotham Bold. */
+  --font-heading-weight: 700;
+  --font-body: 'Gotham Book', 'Inter', 'Montserrat', 'Helvetica Neue', sans-serif;
+
+  --shadow-card: 0 1px 3px rgba(3, 38, 125, 0.06);
+  --shadow-card-hover: 0 4px 18px rgba(3, 38, 125, 0.10);
+}
+
+/* --- Base --------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--ac-bg);
+  color: var(--ac-secondary);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, .heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--ac-navy);
+  margin: 0;
+}
+
+/* Premium subheading — AllianceCorp's signature pattern */
+.eyebrow {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--ac-gold);
+}
+
+.eyebrow-grey {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--ac-text);
+}
+
+a { color: var(--ac-navy); text-decoration: none; }
+a:hover { color: var(--ac-gold); }
+
+input, select, textarea, button { font-family: inherit; }
+
+/* --- Buttons ------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: 2px;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--ac-navy);
+  color: var(--ac-white);
+}
+.btn-primary:hover { background-color: var(--ac-navy-dark); color: var(--ac-white); }
+
+.btn-gold {
+  background-color: var(--ac-gold);
+  color: var(--ac-white);
+}
+.btn-gold:hover { background-color: var(--ac-gold-light); color: var(--ac-white); }
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--ac-navy);
+  border-color: var(--ac-navy);
+}
+.btn-outline:hover { background-color: var(--ac-navy); color: var(--ac-white); }
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--ac-secondary);
+  border-color: var(--ac-border);
+}
+.btn-ghost:hover { background-color: var(--ac-bg); border-color: var(--ac-secondary); }
+
+.btn-sm { padding: 0.45rem 0.95rem; font-size: 0.7rem; }
+
+/* --- Cards -------------------------------------------------------------- */
+.card {
+  background: var(--ac-white);
+  border-radius: 4px;
+  border: 1px solid var(--ac-border);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.18s ease;
+}
+.card-interactive:hover { box-shadow: var(--shadow-card-hover); cursor: pointer; }
+
+.kpi-card {
+  background: var(--ac-white);
+  border: 1px solid var(--ac-border);
+  border-top: 3px solid var(--ac-navy);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+/* --- Badges ------------------------------------------------------------- */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 2px;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+}
+.badge-navy   { background: rgba(3,38,125,0.08);   color: var(--ac-navy); }
+.badge-gold   { background: rgba(208,161,23,0.12); color: #8B6A0F; }
+.badge-green  { background: rgba(97,206,112,0.14); color: #2F7A38; }
+.badge-blue   { background: rgba(110,193,228,0.18); color: #1F6E91; }
+.badge-grey   { background: rgba(122,122,122,0.10); color: var(--ac-secondary); }
+.badge-red    { background: rgba(192,57,43,0.10);  color: var(--ac-danger); }
+
+/* --- Header / Nav ------------------------------------------------------- */
+.app-header {
+  background: var(--ac-white);
+  border-bottom: 1px solid var(--ac-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.app-header-top {
+  background: var(--ac-navy);
+  color: var(--ac-white);
+  border-bottom: 2px solid var(--ac-gold);
+}
+.app-header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.app-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.05rem 1rem;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  color: var(--ac-secondary);
+  border-bottom: 2px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.app-nav-link:hover { color: var(--ac-navy); }
+.app-nav-link.active {
+  color: var(--ac-navy);
+  border-bottom-color: var(--ac-gold);
+}
+
+/* --- View Toggle (My Deals vs Firm View) — hero feature ----------------- */
+/* Designed to sit on the navy top bar: light rgba border, inactive buttons
+ * are translucent white; active button uses gold for clear standout. */
+.view-toggle {
+  display: inline-flex;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 2px;
+  background: rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+.view-toggle button {
+  background: transparent;
+  border: none;
+  padding: 0.55rem 1.2rem;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: rgba(255,255,255,0.75);
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.view-toggle button.active {
+  background: var(--ac-gold);
+  color: var(--ac-white);
+}
+.view-toggle button:not(.active):hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--ac-white);
+}
+
+/* --- Inputs / forms ----------------------------------------------------- */
+.field-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--ac-secondary);
+  margin-bottom: 0.4rem;
+}
+.field-help {
+  font-size: 0.75rem;
+  color: var(--ac-text);
+  margin-top: 0.3rem;
+}
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--ac-border);
+  border-radius: 2px;
+  background: var(--ac-white);
+  font-size: 0.92rem;
+  color: var(--ac-secondary);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--ac-navy);
+  box-shadow: 0 0 0 3px rgba(3,38,125,0.10);
+}
+.textarea { min-height: 100px; resize: vertical; }
+
+/* --- Table -------------------------------------------------------------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.table thead th {
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: var(--ac-text);
+  padding: 0.85rem 1rem;
+  background: var(--ac-bg);
+  border-bottom: 1px solid var(--ac-border);
+  white-space: nowrap;
+}
+.table tbody td {
+  padding: 0.95rem 1rem;
+  border-bottom: 1px solid var(--ac-border-soft);
+  color: var(--ac-secondary);
+  vertical-align: middle;
+}
+.table tbody tr { transition: background-color 0.14s ease; }
+.table tbody tr:hover { background: rgba(3,38,125,0.02); cursor: pointer; }
+.table tbody tr:last-child td { border-bottom: none; }
+
+/* --- Stage progress bar (PEC → Settlement) ------------------------------ */
+.stage-bar {
+  display: flex;
+  gap: 0.4rem;
+  align-items: stretch;
+  width: 100%;
+}
+.stage-step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.stage-step .stage-track {
+  height: 4px;
+  background: var(--ac-border);
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+}
+.stage-step.complete .stage-track,
+.stage-step.current .stage-track {
+  background: var(--ac-gold);
+}
+.stage-step.current .stage-track {
+  background: linear-gradient(to right, var(--ac-gold), var(--ac-gold) 50%, var(--ac-border) 50%);
+}
+.stage-step .stage-label {
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--ac-text);
+}
+.stage-step.complete .stage-label,
+.stage-step.current .stage-label {
+  color: var(--ac-navy);
+}
+
+/* --- Tabs (deal detail) ------------------------------------------------- */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--ac-border);
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+}
+.tab {
+  padding: 0.85rem 1.2rem;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--ac-text);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.tab:hover { color: var(--ac-navy); }
+.tab.active {
+  color: var(--ac-navy);
+  border-bottom-color: var(--ac-gold);
+}
+
+/* --- Toast -------------------------------------------------------------- */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--ac-navy);
+  color: var(--ac-white);
+  padding: 1rem 1.5rem;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-left: 3px solid var(--ac-gold);
+}
+.toast.show { opacity: 1; transform: translateY(0); }
+.toast-icon {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--ac-gold);
+}
+
+/* --- Activity feed ------------------------------------------------------ */
+.activity-row {
+  display: flex;
+  gap: 1rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--ac-border-soft);
+}
+.activity-row:last-child { border-bottom: none; }
+.activity-dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ac-navy);
+  margin-top: 0.45rem;
+}
+
+/* --- Login page --------------------------------------------------------- */
+.login-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: var(--ac-bg);
+}
+.login-hero {
+  background: linear-gradient(135deg, var(--ac-navy) 0%, var(--ac-navy-darker) 100%);
+  color: var(--ac-white);
+  padding: 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.login-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 360px;
+  height: 360px;
+  background: var(--ac-gold);
+  opacity: 0.08;
+  border-radius: 50%;
+}
+.login-hero h1 {
+  color: var(--ac-white);
+  font-size: 2.6rem;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+.login-hero .lead {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.78);
+  max-width: 460px;
+  line-height: 1.55;
+}
+.login-stat {
+  font-family: var(--font-heading);
+  color: var(--ac-gold);
+  font-size: 1.6rem;
+}
+.login-stat-label {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.login-form-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+.login-card {
+  background: var(--ac-white);
+  border: 1px solid var(--ac-border);
+  border-top: 4px solid var(--ac-gold);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .login-shell { grid-template-columns: 1fr; }
+  .login-hero { padding: 3rem 2rem; }
+}
+
+/* --- Stock pipeline cards ---------------------------------------------- */
+.stock-card {
+  background: var(--ac-white);
+  border: 1px solid var(--ac-border);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.stock-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-2px); }
+.stock-card-header {
+  background: linear-gradient(135deg, var(--ac-navy) 0%, var(--ac-navy-dark) 100%);
+  color: var(--ac-white);
+  padding: 1rem 1.25rem;
+  position: relative;
+}
+.stock-card-suburb {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.stock-card-state {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 0.2rem;
+}
+.stock-card-price {
+  font-family: var(--font-heading);
+  position: absolute;
+  right: 1.25rem;
+  top: 1rem;
+  color: var(--ac-gold);
+  font-size: 1rem;
+}
+.stock-card-body {
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.stock-card-stat {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+.stock-card-stat .label {
+  color: var(--ac-text);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 0.65rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+.stock-card-stat .value { color: var(--ac-secondary); font-weight: 600; }
+.stock-card-footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--ac-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Resource cards ----------------------------------------------------- */
+.resource-card {
+  background: var(--ac-white);
+  border: 1px solid var(--ac-border);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: 4px;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.resource-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-2px); cursor: pointer; }
+.resource-card-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(3,38,125,0.08);
+  color: var(--ac-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+/* --- Footer ------------------------------------------------------------- */
+.app-footer {
+  background: var(--ac-navy-darker);
+  color: rgba(255,255,255,0.65);
+  margin-top: 4rem;
+  padding: 2rem 0;
+  font-size: 0.85rem;
+}
+.app-footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.app-footer .powered {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* --- Util --------------------------------------------------------------- */
+.section-label { /* the "premium" all-caps small label seen across the site */
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--ac-gold);
+}
+.divider { height: 1px; background: var(--ac-border); margin: 1.5rem 0; }
+.muted { color: var(--ac-text); }
+.mono-num { font-variant-numeric: tabular-nums; }
+.text-navy   { color: var(--ac-navy); }
+.text-gold   { color: var(--ac-gold); }
+.text-secondary { color: var(--ac-secondary); }
+.text-muted  { color: var(--ac-text); }
+.bg-navy { background-color: var(--ac-navy); }
+.bg-gold { background-color: var(--ac-gold); }
+.bg-bg   { background-color: var(--ac-bg); }
+
+/* Heading size helpers (renamed from .h-1/.h-2 to avoid Tailwind h-{n} utility collision) */
+.hd-display { font-size: 2.4rem; line-height: 1.05; letter-spacing: -0.5px; }
+.hd-1 { font-size: 1.75rem; line-height: 1.15; }
+.hd-2 { font-size: 1.35rem; line-height: 1.25; }
+.hd-3 { font-size: 1.1rem; line-height: 1.3; }

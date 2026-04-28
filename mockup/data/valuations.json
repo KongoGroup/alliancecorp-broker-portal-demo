@@ -1,0 +1,57 @@
+{
+  "VAL-1041": {
+    "id": "VAL-1041",
+    "deal_id": "DEAL-2401",
+    "property_address": "12 Honeydew Crescent, Donnybrook VIC 3064",
+    "valuation_date": "2026-04-04",
+    "valuer": "Herron Todd White",
+    "method": "Full",
+    "purpose": "Purchase",
+    "amount": 690000,
+    "status": "Completed"
+  },
+  "VAL-1042": {
+    "id": "VAL-1042",
+    "deal_id": "DEAL-2402",
+    "property_address": "153 Acacia Drive, Craigieburn VIC 3064",
+    "valuation_date": "2026-04-12",
+    "valuer": "CBRE Valuations",
+    "method": "Desktop",
+    "purpose": "Purchase",
+    "amount": 720000,
+    "status": "Completed"
+  },
+  "VAL-1043": {
+    "id": "VAL-1043",
+    "deal_id": "DEAL-2403",
+    "property_address": "Lot 3120, 22 Pattersons Bay Drive, Pakenham VIC 3810",
+    "valuation_date": "2026-04-28",
+    "valuer": "Opteon",
+    "method": "Full",
+    "purpose": "Purchase",
+    "amount": null,
+    "status": "Ordered"
+  },
+  "VAL-1044": {
+    "id": "VAL-1044",
+    "deal_id": "DEAL-2405",
+    "property_address": "22 Flinders Way, Point Cook VIC 3030",
+    "valuation_date": "2026-03-21",
+    "valuer": "Herron Todd White",
+    "method": "Full",
+    "purpose": "Purchase",
+    "amount": 750000,
+    "status": "Completed"
+  },
+  "VAL-1045": {
+    "id": "VAL-1045",
+    "deal_id": "DEAL-2407",
+    "property_address": "47 Marlow Street, Truganina VIC 3029",
+    "valuation_date": "2026-04-15",
+    "valuer": "Opteon",
+    "method": "Full",
+    "purpose": "Purchase",
+    "amount": 660000,
+    "status": "Completed"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources · AllianceCorp Broker Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app-header"></div>
+
+  <main style="max-width:1280px;margin:0 auto;padding:2rem 1.5rem 0;">
+    <section style="margin-bottom:2rem;">
+      <div class="eyebrow">Library</div>
+      <h1 class="heading hd-display" style="margin-top:0.4rem;">Broker Resources</h1>
+      <p class="muted" style="margin-top:0.5rem;font-size:0.95rem;max-width:720px;">
+        Rate sheets, broker guides, AllianceCorp policy docs and quarterly market updates —
+        gated to AllianceCorp's accredited broker channel.
+      </p>
+    </section>
+
+    <section id="resource-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem;margin-bottom:3rem;"></section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script src="js/app.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/resources.js"></script>
+</body>
+</html>
